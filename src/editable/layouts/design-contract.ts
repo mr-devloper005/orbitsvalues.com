@@ -1,23 +1,23 @@
 import type { CSSProperties } from 'react'
 
 export const editableRootStyle = {
-  '--slot4-page-bg': '#fff9f2',
+  '--slot4-page-bg': '#f4f2ef',
   '--slot4-page-text': '#111111',
-  '--slot4-panel-bg': '#fff3e8',
+  '--slot4-panel-bg': '#fff7ee',
   '--slot4-surface-bg': '#ffffff',
-  '--slot4-muted-text': '#4f463f',
-  '--slot4-soft-muted-text': '#6b6258',
-  '--slot4-accent': '#ff6600',
-  '--slot4-accent-fill': '#ff6600',
-  '--slot4-accent-soft': '#d1e0ff',
+  '--slot4-muted-text': '#57524c',
+  '--slot4-soft-muted-text': '#756d65',
+  '--slot4-accent': '#ff5f2e',
+  '--slot4-accent-fill': '#ff5f2e',
+  '--slot4-accent-soft': '#d9f8a8',
   '--slot4-dark-bg': '#111111',
   '--slot4-dark-text': '#ffffff',
-  '--slot4-media-bg': '#e9e2da',
-  '--slot4-cream': '#fdf1e5',
-  '--slot4-warm': '#fff9f2',
-  '--slot4-lavender': '#d1e0ff',
-  '--slot4-gray': '#f6f6f6',
-  '--slot4-body-gradient': 'linear-gradient(180deg, #fdf1e5 0%, #fff9f2 38%, #f6f6f6 100%)',
+  '--slot4-media-bg': '#e5e1dc',
+  '--slot4-cream': '#faf6ef',
+  '--slot4-warm': '#f4f2ef',
+  '--slot4-lavender': '#eef4ff',
+  '--slot4-gray': '#eeeeec',
+  '--slot4-body-gradient': 'linear-gradient(180deg, #f4f2ef 0%, #faf6ef 42%, #eeeeec 100%)',
 } as CSSProperties
 
 export const editablePalette = {
@@ -50,25 +50,25 @@ export const editablePalette = {
 export const editableDesignContract = {
   shell: {
     page: `min-h-screen ${editablePalette.pageBg} ${editablePalette.pageText}`,
-    section: 'mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8',
+    section: 'mx-auto w-full max-w-[1180px] px-4 sm:px-6 lg:px-8',
     sectionY: 'py-14 sm:py-16 lg:py-20',
   },
   layout: {
-    safeGrid: 'grid gap-6 md:grid-cols-2 xl:grid-cols-3',
+    safeGrid: 'grid gap-6 md:grid-cols-2 lg:grid-cols-3',
     featureGrid: 'grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center',
     rail: 'flex snap-x gap-5 overflow-x-auto pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden',
     minRailCard: 'w-[140px] shrink-0 snap-start sm:w-[160px]',
   },
   type: {
     eyebrow: 'text-xs font-extrabold uppercase tracking-[0.18em]',
-    heroTitle: 'text-4xl font-extrabold leading-[1.08] tracking-tight sm:text-5xl lg:text-[3.25rem]',
+    heroTitle: 'text-4xl font-extrabold leading-[1.02] tracking-tight sm:text-5xl lg:text-[3.55rem]',
     sectionTitle: 'text-3xl font-extrabold tracking-tight sm:text-4xl',
     body: 'text-base leading-relaxed',
   },
   surface: {
-    card: `rounded-2xl border ${editablePalette.border} ${editablePalette.surfaceBg} ${editablePalette.shadow}`,
-    soft: `rounded-2xl border ${editablePalette.border} ${editablePalette.surfaceBg}`,
-    dark: `rounded-2xl ${editablePalette.darkBg} ${editablePalette.darkText} ${editablePalette.shadowStrong}`,
+    card: `rounded-[1.35rem] border ${editablePalette.border} ${editablePalette.surfaceBg} ${editablePalette.shadow}`,
+    soft: `rounded-[1.35rem] border ${editablePalette.border} ${editablePalette.surfaceBg}`,
+    dark: `rounded-[1.35rem] ${editablePalette.darkBg} ${editablePalette.darkText} ${editablePalette.shadowStrong}`,
   },
   button: {
     primary: `inline-flex items-center justify-center rounded-full ${editablePalette.darkBg} px-8 py-3.5 text-sm font-semibold text-white transition hover:opacity-90`,
@@ -76,7 +76,7 @@ export const editableDesignContract = {
     accent: `inline-flex items-center justify-center rounded-full ${editablePalette.accentBg} px-8 py-3.5 text-sm font-semibold text-white transition hover:opacity-90`,
   },
   media: {
-    frame: `relative overflow-hidden rounded-xl ${editablePalette.mediaBg}`,
+    frame: `relative overflow-hidden rounded-[1rem] ${editablePalette.mediaBg}`,
     ratio: 'aspect-[2/3]',
   },
   motion: {

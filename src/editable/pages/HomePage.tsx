@@ -7,6 +7,7 @@ import { pagesContent } from '@/editable/content/pages.content'
 import type { SitePost } from '@/lib/site-connector'
 import { EditableHomeCta, EditableHomeHero, EditableMagazineSplit, EditableStoryRail, EditableTimeCollections } from '@/editable/sections/HomeSections'
 import { EditableSiteShell } from '@/editable/shell/EditableSiteShell'
+import { slot4BrandConfig } from '@/editable/theme/brand.config'
 
 export const revalidate = 300
 
@@ -43,7 +44,7 @@ export default async function HomePage() {
         data={{
           '@context': 'https://schema.org',
           '@type': 'WebSite',
-          name: SITE_CONFIG.name,
+          name: slot4BrandConfig.siteName,
           url: baseUrl,
           potentialAction: {
             '@type': 'SearchAction',
