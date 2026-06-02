@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { BookOpenText, FilePenLine, Search } from 'lucide-react'
 import { buildPageMetadata } from '@/lib/seo'
 import { EditableSiteShell } from '@/editable/shell/EditableSiteShell'
 import { EditableLocalLoginForm } from '@/editable/components/EditableLocalAuthForms'
@@ -18,8 +19,20 @@ export default function LoginPage() {
             <p className="text-xs font-black uppercase tracking-[0.28em] opacity-55">{pagesContent.auth.login.badge}</p>
             <h1 className="mt-5 max-w-xl text-5xl font-black leading-[0.98] tracking-[-0.07em] sm:text-6xl">{pagesContent.auth.login.title}</h1>
             <p className="mt-6 max-w-lg text-sm leading-8 opacity-70">{pagesContent.auth.login.description}</p>
+            <div className="mt-8 grid max-w-xl gap-3 sm:grid-cols-3">
+              {[
+                { Icon: BookOpenText, label: 'Return to reading' },
+                { Icon: FilePenLine, label: 'Manage drafts' },
+                { Icon: Search, label: 'Search faster' },
+              ].map(({ Icon, label }) => (
+                <div key={label} className="rounded-[1rem] border border-[var(--editable-border)] bg-white/75 p-4">
+                  <Icon className="h-5 w-5 text-[var(--slot4-accent)]" />
+                  <p className="mt-3 text-sm font-black leading-5">{label}</p>
+                </div>
+              ))}
+            </div>
           </div>
-          <div className="rounded-[2rem] border border-[var(--editable-border)] bg-white/80 p-6 shadow-[0_24px_70px_rgba(16,36,31,0.12)] backdrop-blur sm:p-8">
+          <div className="rounded-[1.35rem] border border-[var(--editable-border)] bg-white/85 p-6 shadow-[0_24px_70px_rgba(16,36,31,0.12)] backdrop-blur sm:p-8">
             <h2 className="text-2xl font-black tracking-[-0.04em]">{pagesContent.auth.login.formTitle}</h2>
             <EditableLocalLoginForm />
             <p className="mt-5 text-sm opacity-70">New here? <Link href="/signup" className="font-black underline-offset-4 hover:underline">{pagesContent.auth.login.createCta}</Link></p>

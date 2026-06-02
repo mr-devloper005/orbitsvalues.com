@@ -6,12 +6,12 @@ const { recipe } = getFactoryState()
 const productKind = getProductKind(recipe)
 
 export const slot4BrandConfig = {
-  siteName: siteIdentity.name,
-  tagline: siteIdentity.tagline,
-  domain: siteIdentity.domain,
-  baseUrl: siteIdentity.url,
+  siteName: process.env.NEXT_PUBLIC_SITE_NAME || siteIdentity.name,
+  tagline: process.env.NEXT_PUBLIC_SITE_TAGLINE || siteIdentity.tagline,
+  domain: process.env.NEXT_PUBLIC_SITE_DOMAIN || siteIdentity.domain,
+  baseUrl: process.env.NEXT_PUBLIC_SITE_URL || siteIdentity.url,
   productKind,
-  ogImage: siteIdentity.ogImage,
+  ogImage: process.env.NEXT_PUBLIC_SITE_OG_IMAGE || siteIdentity.ogImage,
   accents:
     productKind === 'visual'
       ? { primary: '#8df0c8', surface: '#07101f' }
