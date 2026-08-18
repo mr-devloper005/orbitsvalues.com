@@ -11,7 +11,7 @@ function getTone(kind: ReturnType<typeof getProductKind>) {
   if (kind === 'directory') {
     return {
       shell: 'bg-[#f8fbff] text-slate-950',
-      panel: 'border border-slate-200 bg-white',
+      panel: 'border border-slate-200 bg-[var(--slot4-surface-bg)]',
       soft: 'border border-slate-200 bg-slate-50',
       muted: 'text-slate-600',
       action: 'bg-slate-950 text-white hover:bg-slate-800',
@@ -58,7 +58,7 @@ export default function ContactPage() {
 
   return (
     <EditableSiteShell className={tone.shell}>
-      <main className="mx-auto max-w-[var(--editable-container)] px-4 py-14 sm:px-6 lg:px-8">
+      <main className="mx-auto max-w-[1180px] px-4 py-14 sm:px-6 lg:px-8">
         <section className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.24em] opacity-70">{pagesContent.contact.eyebrow}</p>
